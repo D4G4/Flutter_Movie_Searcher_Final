@@ -57,11 +57,11 @@ class FavoritesState extends State<Favorites> {
   }
 
   void onPressed(int index) {
-    setState(() {
-      filteredMovies.remove(filteredMovies[index]);
-    });
     MovieDatabase db = MovieDatabase();
     db.deleteMovie(filteredMovies[index].id);
+     setState(() {
+      filteredMovies.remove(filteredMovies[index]);
+    });
   }
 
   @override
