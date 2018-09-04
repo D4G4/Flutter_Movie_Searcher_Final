@@ -61,7 +61,7 @@ class FavoritesState extends State<Favorites> {
       filteredMovies.remove(filteredMovies[index]);
     });
     MovieDatabase db = MovieDatabase();
-    db.deleteMovie(filteredMovies[index].id);
+    db.deleteMovie(movieCache[index].id);
   }
 
   @override
